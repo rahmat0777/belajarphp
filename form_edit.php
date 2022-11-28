@@ -35,7 +35,7 @@ if( mysqli_num_rows($query) < 1 ){
         <h3>Formulir Edit pemain</h3>
     </header>
 
-    <form action="proses_edit.php" method="POST">
+    <form action="update.php" method="POST">
 
         <fieldset>
 
@@ -53,7 +53,7 @@ if( mysqli_num_rows($query) < 1 ){
         <p>
             <label for="no_punggung">no punggung </label>
             <?php $agama = $siswa['no_punggung']; ?>
-            <select name="no_punngung">
+            <select name="no_punggung">
                 <option <?php echo ($agama == 1) ? "selected": "" ?>>1</option>
                 <option <?php echo ($agama == 2) ? "selected": "" ?>>2</option>
                 <option <?php echo ($agama == 3) ? "selected": "" ?>>3</option>

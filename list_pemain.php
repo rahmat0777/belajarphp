@@ -32,11 +32,12 @@
         <?php
         $sql = "SELECT * FROM daftar_pemain";
         $query = mysqli_query($db, $sql);
+        $no = 1;
 
         while($siswa = mysqli_fetch_array($query)){
             echo "<tr>";
 
-            echo "<td>".$siswa['id']."</td>";
+            echo "<td>".$no."</td>";
             echo "<td>".$siswa['nama']."</td>";
             echo "<td>".$siswa['posisi']."</td>";
             echo "<td>".$siswa['no_punggung']."</td>";
@@ -47,6 +48,7 @@
             echo "</td>";
 
             echo "</tr>";
+            $no++;
         }
         ?>
 
